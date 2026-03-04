@@ -9,6 +9,8 @@ I maintain this repository as part of my **continuous learning and interview pre
 
 ## 🔗 My Coding Profiles
 LeetCode: https://leetcode.com/u/MaheshPatil_39/
+CodingNinja : https://www.naukri.com/code360/profile/MaheshBPatil
+GeeksforGeeks : https://www.geeksforgeeks.org/profile/maheshpatil19
 
 ## 👨‍💻 About This Repository
 
