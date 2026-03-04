@@ -11,9 +11,9 @@ I maintain this repository as part of my **continuous learning and interview pre
 
 | Platform | Profile Link |
 |---------|-------------|
-| 🟠 LeetCode | https://leetcode.com/u/MaheshPatil_39/ |
-| 🟢 Coding Ninjas (Code360) | https://www.naukri.com/code360/profile/MaheshBPatil |
-| 🟣 GeeksforGeeks | https://www.geeksforgeeks.org/profile/maheshpatil19 |
+|  LeetCode | https://leetcode.com/u/MaheshPatil_39/ |
+|  Coding Ninjas (Code360) | https://www.naukri.com/code360/profile/MaheshBPatil |
+|  GeeksforGeeks | https://www.geeksforgeeks.org/profile/maheshpatil19 |
 
 ## 👨‍💻 About This Repository
 
@@ -27,6 +27,10 @@ I maintain this repository as part of my **continuous learning and interview pre
 ## 💻 Programming Language
 
 - **C++**
+- **Java**
+- **Python**
+- **JavaScript**
+- **SQL**
 
 ---
 
