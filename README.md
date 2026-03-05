@@ -27,6 +27,10 @@ I maintain this repository as part of my **continuous learning and interview pre
 ## 💻 Programming Language
 
 - **C++**
+- **Java**
+- **Python**
+- **JavaScript**
+- **SQL**
 
 ---
 
