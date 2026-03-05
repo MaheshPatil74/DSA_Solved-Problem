@@ -15,6 +15,13 @@ I maintain this repository as part of my **continuous learning and interview pre
 |  Coding Ninjas (Code360) | https://www.naukri.com/code360/profile/MaheshBPatil |
 |  GeeksforGeeks | https://www.geeksforgeeks.org/profile/maheshpatil19 |
 
+
+## 🧠 LeetCode Stats
+
+![LeetCode Stats](https://leetcard.jacoblin.cool/MaheshPatil_39?theme=dark&font=baloo&ext=contest)
+
+---
+
 ## 👨‍💻 About This Repository
 
 ✔ Daily DSA practice  
