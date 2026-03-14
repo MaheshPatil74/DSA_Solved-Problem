@@ -1,3 +1,4 @@
+// TC : O(81)==O(1) , SC : O(1)
 class Solution {
 public:
     bool isValidSudoku(vector<vector<char>>& board) {
