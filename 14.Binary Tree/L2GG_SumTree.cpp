@@ -1,10 +1,3 @@
-/*  Tree node
-struct Node
-{
-    int data;
-    Node* left, * right;
-}; */
-
 // Should return true if tree is Sum Tree, else false
 class Solution {
   private :
@@ -40,6 +33,7 @@ class Solution {
         }
         else
             ans.first = false;
+        
         return ans;
     }
   

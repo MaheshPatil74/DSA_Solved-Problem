@@ -22,22 +22,18 @@ Node* newNode(int val) {
 class Solution {
   private :
     int height( Node * node ){
-        if(node==NULL){
+        if(node==NULL)
             return 0 ;
-        }
         return 1 + max( height(node->left) , height(node->right) ) ;
     }
     
   public:
     int diameter(Node* root) {
-        // Your code here
-        if( root == NULL ){
+        if( root == NULL )
             return 0 ;
-        }
         int op1 = diameter(root->left) ;
         int op2 = diameter(root->right) ;
         int op3 = height(root->left) + height(root->right) +1 ;
-        
         int ans = max(op1, max(op2,op3) ) ;
         return ans ;
     }
@@ -67,7 +63,6 @@ class Solution {
     }
   public:
     int diameter(Node* root) {
-        // Your code here
         return diameterFast(root).first ;
     }
 };
