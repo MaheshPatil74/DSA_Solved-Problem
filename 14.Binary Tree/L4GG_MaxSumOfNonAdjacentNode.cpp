@@ -1,13 +1,3 @@
-// Node Structure
-/*
-struct Node
-{
-    int data;
-    Node* left;
-    Node* right;
-};
-*/
-
 class Solution {
   public:
     // Function to return the maximum sum of non-adjacent nodes.
@@ -22,20 +12,15 @@ class Solution {
         pair<int,int> right = solve(root->right);
         
         pair<int,int> res;
-        
         res.first = root->data + left.second + right.second;
-        
         res.second = max(left.first, left.second) + max(right.first, right.second);
-        
         return res;
         
     }
-    int getMaxSum(Node *root) 
-    {
+    int getMaxSum(Node *root) {
         pair<int,int> ans = solve(root);
         // ans.first ==>> maximum sum including currnt level
         // ans.second ==>> maximum sum excluding currnt level
-
         return max(ans.first, ans.second);
     }
 };

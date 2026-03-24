@@ -1,34 +1,7 @@
 #include <bits/stdc++.h> 
-/*
-    Following is the class structure of BinaryTreeNode class for referance:
-
-    class BinaryTreeNode {
-       public : 
-        T data;
-        BinaryTreeNode<T> *left;
-        BinaryTreeNode<T> *right;
-
-        BinaryTreeNode(T data) {
-            this -> data = data;
-            left = NULL;
-            right = NULL;
-        }
-
-        ~BinaryTreeNode() {
-            if (left){
-                delete left;
-            }
-            if (right){
-                delete right;
-            }
-        }
-    };
-*/
-
 // Approach 1 ==>> directly build a tree like as first lecture of BST but problem is that tC is O(n*n) which is inefficient
 // approach 2 ==>> sort tthe preoprder so that we get inorder and using both that is inorder and preorder create a tree and TC = O(N*logN)
 // approach 3 ==>>
-
 BinaryTreeNode<int>* solve(vector<int> &preorder , int mini , int maxi , int & i){
     if( i>= preorder.size() )
         return NULL ;

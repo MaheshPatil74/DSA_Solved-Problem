@@ -1,18 +1,4 @@
-/*
-struct Node {
-    int data;
-    Node *left;
-    Node *right;
-
-    Node(int val) {
-        data = val;
-        left = right = NULL;
-    }
-};
-*/
-
 // TLE problem
-
 class Solution {
   public:
     void solve(Node* root, int k, int &count, vector<int> path) {
@@ -40,9 +26,7 @@ class Solution {
         path.pop_back();
     }
     
-    int sumK(Node *root,int k)
-    {
-        // code here
+    int sumK(Node *root,int k)  {
         vector<int> path;
         int count = 0;
         solve(root, k, count, path);

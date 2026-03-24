@@ -1,23 +1,4 @@
 #include <bits/stdc++.h> 
-/*************************************************************
- 
-    Following is the Binary Tree node structure
-
-    class BinaryTreeNode 
-    {
-    public : 
-        T data;
-        BinaryTreeNode<T> *left;
-        BinaryTreeNode<T> *right;
-
-        BinaryTreeNode(T data) {
-            this -> data = data;
-            left = NULL;
-            right = NULL;
-        }
-    };
-
-*************************************************************/
 // Approach 1 : find inorder and return value using indexing
 void inorder(BinaryTreeNode<int> *root , vector<int> & ans){
     if(root==NULL)
@@ -60,7 +41,6 @@ int solve(BinaryTreeNode<int>* root, int &i, int k){
     return solve(root->right,i,k) ;
 }
 int kthSmallest(BinaryTreeNode<int>* root, int k) {
-    // Write your code here.
     int i = 0 ;
     int ans = solve(root,i,k) ;
     return ans ;

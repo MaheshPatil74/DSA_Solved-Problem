@@ -1,17 +1,14 @@
 // In Insertion , deletion and search :
 // Time complexity ==>> O(H)
 // Worst Time complexity ==>> O(n) 
-
 #include<iostream>
 #include<queue>
-using namespace std ;
-
+using namespace std ; 
 class Node{
     public :
         int data ;
         Node* left ;
         Node* right ;
-
     Node( int data ){
         this->data = data ;
         this->left = NULL ;
@@ -42,7 +39,6 @@ Node* insertIntoBST(Node* root , int data ){
 void takeInput(Node* & root){
     int data ;
     cin>>data ;
-
     while( data != -1 ){
         root = insertIntoBST(root,data);
         cin>> data ;
@@ -53,22 +49,18 @@ void levelOrderTraversal(Node * root){
     queue<Node*> q ;
     q.push(root) ;
     q.push(NULL) ;
-
     while( !q.empty() ){
         Node* temp = q.front() ;
         q.pop() ;
-
         if( temp == NULL ){
             cout<<endl ;
-            if( !q.empty() ){
+            if( !q.empty() )
                 q.push(NULL) ;
-            }
         }
         else{
             cout<< temp->data <<" ";
             if(temp->left)
                 q.push(temp->left) ;
-
             if(temp->right)
                 q.push(temp->right) ;
         }
@@ -79,7 +71,6 @@ void levelOrderTraversal(Node * root){
 void inorderTraversal(Node*root){
     if(root==NULL)
         return ;
-
     inorderTraversal(root->left) ;
     cout<< root->data <<" " ;
     inorderTraversal(root->right) ;
@@ -88,7 +79,6 @@ void inorderTraversal(Node*root){
 void preorderTraversal(Node*root){
     if(root==NULL)
         return ;
-
     cout<< root->data <<" " ;
     preorderTraversal(root->left) ;
     preorderTraversal(root->right) ;
@@ -97,7 +87,6 @@ void preorderTraversal(Node*root){
 void postorderTraversal(Node*root){
     if(root==NULL)
         return ;
-
     postorderTraversal(root->left) ;
     postorderTraversal(root->right) ;
     cout<< root->data <<" " ;
@@ -109,18 +98,16 @@ bool searchInBST1(Node *root, int x) {
     if(root==NULL)
         return false ;
 
-    if(root->data == x ){
+    if(root->data == x )
         return true ;
-    }
 
     if( x < root->data ){
         // left part 
         return searchInBST1(root->left,x) ;
     }
-    else{
+    else
         // right part
         return searchInBST1(root->right,x) ;
-    }
 }
 
 // Iterative Way ==>> TC = O(H) and SC = O(1)
@@ -129,7 +116,6 @@ bool searchInBST2(Node *root, int x) {
     while(temp!=NULL){
         if( x == temp->data )
             return true ;
-
         if( x < temp->data )
             temp = temp->left ;
         else
@@ -142,7 +128,6 @@ Node * minValue( Node *& root ){
     Node* temp = root ;
     while( temp->left != NULL )
         temp = temp->left ;
-
     return temp ;
 } 
 
@@ -150,7 +135,6 @@ Node * maxValue( Node *& root ){
     Node* temp = root ;
     while( temp->right != NULL )
         temp = temp->right ;
-
     return temp ;
 } 
 

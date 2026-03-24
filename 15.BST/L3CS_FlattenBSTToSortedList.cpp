@@ -1,32 +1,5 @@
 #include <bits/stdc++.h> 
-/************************************************************
-
-    Following is the Binary Tree node structure
-    
-    template <typename T>
-    class TreeNode {
-        public :
-        T data;
-        TreeNode<T> *left;
-        TreeNode<T> *right;
-
-        TreeNode(T data) {
-            this -> data = data;
-            left = NULL;
-            right = NULL;
-        }
-
-        ~TreeNode() {
-            if(left)
-                delete left;
-            if(right)
-                delete right;
-        }
-    };
-
-************************************************************/
 // TC = O(n) ans SC = O(H)
-
 void inorder(TreeNode<int>* root , vector<TreeNode<int>*>& arr ){
     if( root == NULL )
         return ;
@@ -36,9 +9,7 @@ void inorder(TreeNode<int>* root , vector<TreeNode<int>*>& arr ){
     inorder(root->right , arr ) ;
 }
 
-TreeNode<int>* flatten(TreeNode<int>* root)
-{
-    // Write your code here
+TreeNode<int>* flatten(TreeNode<int>* root){
     vector<TreeNode<int>*> arr ;
     inorder(root , arr) ;
     int n = arr.size() ;
@@ -52,7 +23,6 @@ TreeNode<int>* flatten(TreeNode<int>* root)
     // i points on last node
     arr[i]->left = NULL ;
     arr[i]->right = NULL ;
-
     return arr[0] ;   
 }
 
@@ -89,6 +59,5 @@ TreeNode<int>* flatten(TreeNode<int>* root)
     // 3rd step
     curr->left = NULL ;
     curr->right = NULL ;
-
     return newRoot ;
 }

@@ -1,18 +1,3 @@
-/*************************************************************
-
-    Following is the Binary Tree node structure:
-
-    class TreeNode
-    {
-    public:
-        int data;
-        TreeNode *left, *right;
-        TreeNode() : data(0), left(NULL), right(NULL) {}
-        TreeNode(int x) : data(x), left(NULL), right(NULL) {}
-        TreeNode(int x, TreeNode *left, TreeNode *right) : data(x), left(left), right(right) {}
-    };
-
-*************************************************************/
 // Approach 1 : TC = O(m+n) && SC = O(m+n)
 void inorder(TreeNode *root , vector<int>& arr){
     if( root == NULL )
@@ -26,27 +11,22 @@ void inorder(TreeNode *root , vector<int>& arr){
 vector<int> mergeArrays(vector<int>& a , vector<int>& b ){
     vector<int> ans(a.size() + b.size()) ;
 
-    int i = 0 , j=0 ;
+    int i = 0 , j = 0 ;
     int k = 0 ;
     while(i<a.size() && j<b.size() ){
-        if(a[i]<b[j] ){
+        if(a[i]<b[j] )
             ans[k++] = a[i++];
-        }
-        else{
+        else
             ans[k++] = b[j++] ;
-        }
     }
-    while(i<a.size() ){
+    while(i<a.size() )
         ans[k++] = a[i++];
-    } 
-    while(j<b.size() ){
+    while(j<b.size() )
         ans[k++] = b[j++];
-    } 
     return ans ;
 }
 
 TreeNode* inorderToBST(int start , int end , vector<int> arr ){
-    // base case
     if( start>end )
         return NULL ;
 
@@ -158,9 +138,8 @@ int countNode(TreeNode* head ){
 
 TreeNode* soretedLLToBST(TreeNode* head, int n){
     // base case
-    if( n<=0 || root==NULL ){
+    if( n<=0 || root==NULL )
         return NULL ;
-    }
 
     TreeNode* left = soretedLLToBST(head,n/2);
     TreeNode* root = head ;

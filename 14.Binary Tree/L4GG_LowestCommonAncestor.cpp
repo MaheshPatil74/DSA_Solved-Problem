@@ -1,26 +1,8 @@
-
-/* A binary tree node
-struct Node
-{
-    int data;
-    struct Node* left;
-    struct Node* right;
-
-    Node(int x){
-        data = x;
-        left = right = NULL;
-    }
-};
-*/
-
 // TC = O(n) ans SC = O(height of tree) == { O(n) <== if skew tree }
-
 class Solution {
   public:
     // Function to return the lowest common ancestor in a Binary Tree.
     Node* lca(Node* root, int n1, int n2) {
-        // Your code here
-        //base case
         if(root == NULL)
             return NULL;
         
