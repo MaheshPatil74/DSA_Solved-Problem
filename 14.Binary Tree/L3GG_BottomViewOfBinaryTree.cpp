@@ -1,16 +1,6 @@
-/*
-struct Node
-{
-    int data;
-    Node* left;
-    Node* right;
-};
-*/
-
 class Solution {
   public:
     vector<int> bottomView(Node *root) {
-        // Your Code Here
         vector<int> ans ;
         if(root==NULL)
             return ans ;
@@ -27,7 +17,6 @@ class Solution {
             Node* frontNode = temp.first ;
             int hd = temp.second ;
             
-
             topNode[hd] = frontNode->data ;
                 
             if(frontNode->left)

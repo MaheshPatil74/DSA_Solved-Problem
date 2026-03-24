@@ -1,18 +1,3 @@
-/* A binary tree node
-
-struct Node
-{
-    int data;
-    struct Node* left;
-    struct Node* right;
-
-    Node(int x){
-        data = x;
-        left = right = NULL;
-    }
-};
- */
-
 class Solution {
   private :
     void solve(Node* root, vector<int> &ans, int level) {

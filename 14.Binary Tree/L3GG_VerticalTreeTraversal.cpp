@@ -1,26 +1,11 @@
-/*
-// Tree Node
-class Node {
-  public:
-    int data;
-    Node* left;
-    Node* right;
-
-    // Constructor to initialize a new node
-    Node(int val) {
-        data = val;
-        left = NULL;
-        right = NULL;
-    }
-};
-*/
-
 class Solution {
   public:
     vector<vector<int>> verticalOrder(Node *root) {
-        // Your code here
+        // represent horizontal distance map with level and elements
         map<int , map<int, vector<int> > > nodes ;
-        queue< pair<Node * , pair<int,int> > > q ;
+
+        // represent node with horizontal distance and level
+        queue< pair<Node * , pair<int,int> > > q ;  
         vector<vector<int>> ans ;
         
         if( root==NULL )

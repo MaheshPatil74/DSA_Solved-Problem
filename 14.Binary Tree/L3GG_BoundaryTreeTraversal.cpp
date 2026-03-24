@@ -1,35 +1,14 @@
-/*
-// Tree Node
-class Node {
-  public:
-    int data;
-    Node* left;
-    Node* right;
-
-    // Constructor to initialize a new node
-    Node(int val) {
-        data = val;
-        left = NULL;
-        right = NULL;
-    }
-};
-*/
-
 class Solution {
   private :
-    
     void traverseLeft( Node * root , vector<int> & ans ){
-        
         if( (root==NULL) || (root->left==NULL && root->right==NULL) )
             return ;
             
         ans.push_back(root->data) ;
-        if(root->left){
+        if(root->left)
             traverseLeft(root->left , ans ) ;
-        }
-        else{
+        else
             traverseLeft(root->right , ans ) ;
-        }
     }
 
     void traverseLeaf( Node * root , vector<int> & ans ){
@@ -51,12 +30,10 @@ class Solution {
         if( (root==NULL) || (root->left==NULL && root->right==NULL) )
             return ;
             
-        if(root->right){
+        if(root->right)
             traverseRight(root->right , ans ) ;
-        }
-        else{
+        else
             traverseRight(root->left , ans ) ;
-        }
         // wapas Aagye
         ans.push_back(root->data) ;
     }

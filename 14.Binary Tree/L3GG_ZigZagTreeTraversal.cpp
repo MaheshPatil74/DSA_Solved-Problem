@@ -1,22 +1,7 @@
-/*Structure of the node of the binary tree is as
-struct Node {
-    int data;
-    Node *left;
-    Node *right;
-
-    Node(int val) {
-        data = val;
-        left = right = NULL;
-    }
-};
-*/
-
 // TC = O(n) ans SC = O(n)
 class Solution {
   public:
-    // Function to store the zig zag order traversal of tree in a list.
     vector<int> zigZagTraversal(Node* root) {
-        // Code here
         vector<int> result ;
         if( root == NULL )
             return result ;

@@ -40,6 +40,7 @@ class Solution {
 };
 
 // Approach 2 :
+// pair<int,int> === first is for store diameter and second for height
 class Solution {
   private :
     pair<int,int> diameterFast(Node * root){

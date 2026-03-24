@@ -1,22 +1,11 @@
-/*
-struct Node
-{
-    int data;
-    Node* left;
-    Node* right;
-};
-*/
 class Solution {
   public:
-    // Function to return a list of nodes visible from the top view
-    // from left to right in Binary Tree.
     vector<int> topView(Node *root) {
-        // code here
         vector<int> ans ;
         if(root==NULL)
             return ans ;
             
-        map<int,int> topNode ;
+        map<int,int> topNode ;      // map horizontal distance with node value
         queue<pair<Node*,int>> q ;
         
         q.push(make_pair(root,0)) ;
