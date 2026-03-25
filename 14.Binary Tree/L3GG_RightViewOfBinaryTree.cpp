@@ -2,7 +2,7 @@
 class Solution {
   private :
     void solve(Node* root, vector<int> &ans, int level) {
-    //base case
+        //base case
         if(root == NULL)
             return ;
            
@@ -17,7 +17,6 @@ class Solution {
   public:
     // Function to return list containing elements of right view of binary tree.
     vector<int> rightView(Node *root) {
-        // Your Code here
         vector<int> ans;
         solve(root, ans, 0);
         return ans;
