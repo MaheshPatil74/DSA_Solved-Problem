@@ -1,6 +1,6 @@
 // Approach 3 : Optimal Approach (Floyd’s Cycle Detection)
 // But question say used constant space and do not modify array
-// TC : O(N) , SC : O(N)
+// TC : O(N) , SC : O(1)
 class Solution {
 public:
     int findDuplicate(vector<int>& nums) {
