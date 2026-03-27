@@ -1,6 +1,5 @@
 // User function Template for C++
 // we use concept of morris traversal technique here as question have limitation to solve in SC = O(1) 
-
 class Solution {
   public:
     void flatten(Node *root) {

@@ -1,22 +1,3 @@
-/*
-class Node {
-public:
-    int data;
-    Node* left;
-    Node* right;
-
-    Node(int val) {
-        data = val;
-        left = NULL;
-        right = NULL;
-    }
-};
-
-Node* newNode(int val) {
-    return new Node(val);
-}
-*/
-
 // Approach 1 : but it take large time to compute
 #include<algorithm>
 class Solution {
