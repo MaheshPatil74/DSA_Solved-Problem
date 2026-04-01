@@ -1,25 +1,3 @@
-// Approach 1 :
-// TC = O(n*n) 
-class Solution {
-  private :
-    int height( Node * root){
-        if( root == NULL )
-            return 0 ;
-        return 1 + max(height(root->left),height(root->right)) ;
-    }
-  public:
-    bool isBalanced(Node* root) {
-        if( root == NULL )
-            return true ;
-        
-        bool left = isBalanced(root->left) ;
-        bool right = isBalanced(root->right) ;
-        bool diff = abs(height(root->left) - height(root->right)) <= 1 ;
-        
-        return ( left && right && diff ) ; 
-    }
-};
-
 // Approach 2 :
 // TC = O(n) 
 class Solution{
@@ -47,4 +25,27 @@ class Solution{
     bool isBalanced(Node *root){
         return isBalancedFast(root).first;
     }  
+};
+
+
+// Approach 1 :
+// TC = O(n*n) 
+class Solution {
+  private :
+    int height( Node * root){
+        if( root == NULL )
+            return 0 ;
+        return 1 + max(height(root->left),height(root->right)) ;
+    }
+  public:
+    bool isBalanced(Node* root) {
+        if( root == NULL )
+            return true ;
+        
+        bool left = isBalanced(root->left) ;
+        bool right = isBalanced(root->right) ;
+        bool diff = abs(height(root->left) - height(root->right)) <= 1 ;
+        
+        return ( left && right && diff ) ; 
+    }
 };
