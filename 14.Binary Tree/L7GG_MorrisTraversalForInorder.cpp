@@ -1,19 +1,3 @@
-/*
-// Tree Node
-class Node {
-  public:
-    int data;
-    Node* left;
-    Node* right;
-
-    // Constructor to initialize a new node
-    Node(int val) {
-        data = val;
-        left = NULL;
-        right = NULL;
-    }
-};
-*/
 // All another traversal technique have TC = O(n) ans SC = O(n)
 
 // Note==>> this is one of important traversal technique of binary tree
