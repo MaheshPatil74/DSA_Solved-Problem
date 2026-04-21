@@ -8,7 +8,6 @@ class Solution {
   public:
     // Function to return a list containing the inorder traversal of the tree.
     vector<int> inOrder(Node* root) {
-        // Your code here
         vector<int> res;
         Node* curr = root;
     
@@ -22,9 +21,8 @@ class Solution {
             else {
                 // Find the inorder predecessor of curr
                 Node* prev = curr->left;
-                while (prev->right != nullptr && prev->right != curr) {
+                while (prev->right != nullptr && prev->right != curr)
                     prev = prev->right;
-                }
     
                 // Make curr the right child of its 
                 // inorder predecessor

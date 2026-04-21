@@ -3,7 +3,6 @@
 class Solution {
   public:
     void flatten(Node *root) {
-        // code here
         Node* curr = root ;
         
         while(curr != NULL ){
@@ -14,15 +13,18 @@ class Solution {
                     
                 pred->right = curr->right ;
                 curr->right = curr->left ;
+                
+                // //  Method 1 : left paart Null 
+                curr->left = NULL ;
             }
             curr = curr->right ;
         }
         
-        // left paart Null 
-        curr = root ;
-        while( curr != NULL ){
-            curr->left =NULL ;
-            curr = curr->right ;
-        }
+        // //  Method 2 : left paart Null 
+        // curr = root ;
+        // while( curr != NULL ){
+        //     curr->left =NULL ;
+        //     curr = curr->right ;
+        // }
     }
 };
