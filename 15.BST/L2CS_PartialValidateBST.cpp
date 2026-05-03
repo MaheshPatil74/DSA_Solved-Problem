@@ -1,3 +1,23 @@
+// Approach 2 : Optimal Approach ==>> Range Method
+bool isBST(BinaryTreeNode<int> *root , int mini , int maxi ){
+    if(root==NULL)
+        return true ;
+
+    if( root->data < mini || root->data > maxi )
+        return false ;
+
+    return isBST(root->left , mini , root->data ) && isBST(root->right,root->data,maxi);
+}
+
+bool validateBST(BinaryTreeNode<int> *root) {
+    return isBST(root , INT_MIN , INT_MAX ) ; 
+}
+
+
+
+
+
+
 #include <bits/stdc++.h> 
 // Approach 1 : find inorder and check sorted ==>>TC = O(n) & SC=O(n) i think check once
 bool checkSorted(vector<int> arr ){
