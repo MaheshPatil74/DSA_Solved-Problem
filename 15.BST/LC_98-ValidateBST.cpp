@@ -1,0 +1,17 @@
+
+class Solution {
+public:
+    bool isBST( TreeNode* root , long mini , long maxi ){
+        if( root == NULL )
+            return true ;
+
+        if( root->val <= mini || root->val >= maxi )
+            return false ;
+
+        return isBST( root->left, mini , root->val ) && isBST( root->right,root->val,maxi) ;
+    }
+
+    bool isValidBST(TreeNode* root) {
+        return isBST( root , LONG_MIN , LONG_MAX ) ;
+    }
+};
