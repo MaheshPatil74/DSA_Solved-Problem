@@ -87,7 +87,7 @@ My goal with this repository is to:
 
 ## 📈 Progress Tracker
 
-🎯 **Target:** Solve **450+ DSA problems**
+🎯 **Target:** Solve **500+ DSA problems**
 
 This repository will be **continuously updated** as I solve more problems and improve my understanding of algorithms and data structures.
 
