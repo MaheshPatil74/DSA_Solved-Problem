@@ -1,5 +1,31 @@
-// Approach 2 : Better aproach by storing nodes directly instead of values
+// Approach 3 : Optimal In-Place
 // TC : O(N) , SC : O(H)
+class Solution {
+private : 
+    void inorder( TreeNode* root , TreeNode* &prev  ){
+        if( !root )
+            return ;
+
+        inorder( root->left , prev ) ;
+
+        root->left = nullptr ;
+        prev->right = root ;
+        prev = root ;
+
+        inorder( root->right , prev ) ;
+    }
+public:
+    TreeNode* increasingBST(TreeNode* root) {
+        TreeNode* dummy = new TreeNode(0) ;
+        TreeNode* prev = dummy ;
+        inorder( root , prev ) ;
+        return dummy->right ;
+    }
+};
+
+
+// Approach 2 : Better aproach by storing nodes directly instead of values
+// TC : O(N) , SC : O(N)
 class Solution {
 public:
     void inorderBST( TreeNode* root , vector<TreeNode*>& inorder ){
