@@ -1,5 +1,36 @@
-// Approach 1 : Brute Force
-// TC : O(N) , SC : O(N)
+// Approach 2 : Better aproach by storing nodes directly instead of values
+// TC : O(N) , SC : O(H)
+class Solution {
+public:
+    void inorderBST( TreeNode* root , vector<TreeNode*>& inorder ){
+        if( root == NULL )
+            return ;
+
+        inorderBST( root->left , inorder );
+        inorder.push_back( root ) ;
+        inorderBST( root->right , inorder );
+    }
+
+    TreeNode* increasingBST(TreeNode* root) {
+        vector<TreeNode*> inorder ;
+        inorderBST( root , inorder ) ;
+
+        int N = inorder.size() ;
+        for( int i = 0 ; i+1<N ; i++ ){
+            inorder[i]->left = nullptr ;
+            inorder[i]->right = inorder[i+1] ; 
+        }
+        inorder[N-1]->left = nullptr ;
+        inorder[N-1]->right = nullptr ;
+
+        return inorder[0] ;
+    }
+};
+
+
+// Approach 1 : Brute Force using inorder of values
+// TC : O(N) , 
+// SC : O(N)    <<== Vector + Recursion
 class Solution {
 public:
     void inorderBST( TreeNode* root , vector<int>& inorder ){
