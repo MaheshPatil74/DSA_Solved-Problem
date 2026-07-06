@@ -1,0 +1,20 @@
+// TC : O(N*d) == O(N*LogN) , SC : O(1)
+class Solution {
+public:
+    bool isNoZero( int num ){
+        while( num ){
+            if( num % 10 == 0 )
+                return false ;
+            num /= 10 ;
+        }
+        return true ;
+    }
+    vector<int> getNoZeroIntegers(int n) {
+        for( int a = 1 ; a<n ; a++ ){
+            int b = n-a ;
+            if( isNoZero(a) && isNoZero(b) )
+                return {a,b} ;
+        }
+        return {} ;
+    }
+};
